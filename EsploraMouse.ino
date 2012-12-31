@@ -1,3 +1,14 @@
+/* 
+   Created Dec 28, 2012
+   by w9jds (Jeremy Shore)
+
+   This code sets up the Esplora to be used as your mouse
+   it makes the potentiometer set how fast the mouse moves by 
+   changing the threshold. It puts the left button for left click
+   the bottom button for middle click and the right button for
+   right click. The top button is to toggle if it is on or not. 
+*/
+   
 #include <Esplora.h>
 
 boolean active = false;// whether or not to control the mouse
