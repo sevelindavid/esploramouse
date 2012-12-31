@@ -7,10 +7,6 @@ const byte buttons[] = { SWITCH_UP, SWITCH_RIGHT, SWITCH_DOWN, SWITCH_LEFT };
 const char mouseActions[] = { ' ', MOUSE_RIGHT, MOUSE_MIDDLE, MOUSE_LEFT };
 
 void setup() {
-   //The switch that will initiate the Mouse press
-  pinMode(2,INPUT);
-  //The switch that will terminate the Mouse press
-  pinMode(3,INPUT);
   Mouse.begin();
 }
 
