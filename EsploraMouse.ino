@@ -27,13 +27,12 @@ void loop() {
     prevStates[0] = newState;
   }
 
-
   // if the mouse control state is active, read the joystick and move the mouse:
   if (active == true) {
-    int threshold = map(Esplora.readSlider(),0,1024,10,70);
-    int x = Esplora.readJoystickX();
-    int y = Esplora.readJoystickY();
-    Mouse.move(-(x/threshold), (y/threshold), 0);
+    int threshold = map(Esplora.readSlider(),0,1024,250,10);
+    int x = map(Esplora.readJoystickX(), -512, 512, -threshold, threshold);
+    int y = map(Esplora.readJoystickY(), -512, 512, -threshold, threshold);
+    Mouse.move(-(x/5), (y/5), 0);
   }  
 
   for (byte z = 1; z <= 3; z++) {
